@@ -1,0 +1,25 @@
+.user{
+    flex-direction: column;
+    width: 250px;
+    padding-right: 60px;
+
+    input[type=text] {
+      width: 92%;
+      padding: 10px 10px;
+      margin: 8px 10px;
+      box-sizing: border-box;
+      background-color: #3CBC8D;
+      color: #ffffff;
+    }
+
+    .user-card{
+        border: 1px solid black;
+        margin: 10px;
+        padding: 10px;
+
+        .user-img{
+            width: auto;
+            height: 70px;
+        }
+    }
+  }

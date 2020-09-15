@@ -1,0 +1,33 @@
+.text-right{
+    text-align: right;
+}
+.list-reports{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid #000000;
+    overflow: auto;
+    width: 700px;
+    height: 450px;
+
+    .user-card{
+        text-align: left;
+        padding: 5px;
+        margin: 10px;
+        width: 250px;
+        height: 130px;
+        border: 1px solid #808080;
+
+        a{
+            background:  #3CBC8D;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 5px 86px;
+            border-radius: 20px;
+            width: 60px;
+            &:hover{
+                background:  #309771;
+            }
+        }
+    }
+  }
