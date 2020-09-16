@@ -1,9 +1,11 @@
 import {GET_USERS, USERS_ERROR} from '../types'
 import axios from 'axios'
 
-export const getUsers = () => async dispatch => {
+export const getUser = (e) => async dispatch => {
     try{
-        const res = await axios.get(`https://api.github.com/users`)
+        
+        const username = e.login;
+        const res = await axios.get(`https://api.github.com/users/${username}/repos`)
         dispatch({
             type: GET_USERS,
             payload: res.data

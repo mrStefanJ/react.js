@@ -1,3 +1,5 @@
+@import "./color.scss";
+
 .text-right{
     text-align: right;
 }
@@ -5,7 +7,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    border: 1px solid #000000;
+    border: 1px solid $color-white;
+    ;
     overflow: auto;
     width: 700px;
     height: 450px;
@@ -16,11 +19,11 @@
         margin: 10px;
         width: 250px;
         height: 130px;
-        border: 1px solid #808080;
+        border: 1px solid $color-grey;
 
         a{
-            background:  #3CBC8D;
-            color: #ffffff;
+            background:  #309771;
+            color: $color-white;
             text-decoration: none;
             padding: 5px 86px;
             border-radius: 20px;

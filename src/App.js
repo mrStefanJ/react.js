@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <div className="container">
           <User />
+          <ListReport />
       </div>
     </div>
   );

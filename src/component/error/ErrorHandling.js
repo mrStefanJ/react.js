@@ -16,7 +16,7 @@ class ErrorHandling extends Component {
         .then(response => this.setState({ userID: response.data.id}))
         .catch(error => {
             this.setState({errorMessage: error.message});
-            console.error('Somethin is wrong!', error)
+            console.error('Something is wrong!', error)
         })
     }
     render() {

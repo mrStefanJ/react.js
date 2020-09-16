@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getUsers } from '../action/useAction'
+
 import '../../styles/user.scss'
 
 class User extends Component {
@@ -17,12 +18,11 @@ class User extends Component {
     }
 
     componentDidMount() {
-        this.props.getUsers()
+        this.props.getUsers();
     }
 
     render() {
          const { users } = this.props.users
-        console.log(users);
 
         return (
             <div className="user">
@@ -32,11 +32,12 @@ class User extends Component {
                 <div >
                     {users.map(user => 
                     <a href="#">
-                    <div className="user-card" key={user.id}>
-                        <img src={user.avatar_url} className="user-img"/>
-                        <h4>{}</h4>
-                        <p></p>
-                    </div></a>)}
+                        <div className="user-card" key={user.id}>
+                            <img src={user.avatar_url} className="user-img"/>
+                            <p>{user.login}</p>
+                            <p className="user-text">{user.node_id}</p>
+                        </div>
+                    </a>)}
                 </div>
             </div>
         )

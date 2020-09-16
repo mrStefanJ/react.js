@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { getUsers } from '../action/useAction'
+import { getUser } from '../action/useUser'
 import '../../styles/listreport.scss'
 
  class ListReport extends Component {
@@ -12,13 +12,11 @@ import '../../styles/listreport.scss'
     }
 
     componentDidMount() {
-        this.props.getUsers()
+        this.props.getUser()
     }
 
     render() {
         const { users } = this.props.users
-
-       console.log(users);
 
        return (
         <div>
@@ -28,7 +26,8 @@ import '../../styles/listreport.scss'
                     {users.map(user => 
                     <div className="user-card" key={user.id}>
                         <p>{user.name}</p>
-                        <p>{user.email}</p>
+                        <p>{user.description}</p>
+                        <p>{user.default_branch}</p>
                         <a href="#" target="_blank">Read More</a>
                     </div>)}
                 </div>
@@ -38,4 +37,4 @@ import '../../styles/listreport.scss'
 }
 const mapStateInProps = (state) => ({ users: state.users })
 
-export default connect(mapStateInProps, { getUsers })(ListReport)
+export default connect(mapStateInProps, { getUser })(ListReport)
